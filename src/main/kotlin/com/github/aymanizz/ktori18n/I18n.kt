@@ -144,7 +144,7 @@ val ApplicationCall.locale
         val i18n = application.i18n
 
         fun writeCookie(locale: Locale) {
-            response.cookies.append(Cookie(i18n.localeCookieName, locale.language, maxAge = 60 * 60))
+            response.cookies.append(Cookie(i18n.localeCookieName, locale.language, maxAge = 60 * 60, path = "/"))
         }
 
         fun readCookie(): String? {
